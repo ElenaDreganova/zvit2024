@@ -1,0 +1,98 @@
+h1 {
+    font-family:'Pangolin', sans-serif;
+}
+
+#indexBody a {
+    text-decoration:underline;
+}
+
+.actions {
+    counter-reset:list;
+}
+
+.books {
+    padding:50px;
+    counter-reset:list;
+    text-align:left;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:stretch;
+    justify-content:space-around;
+}
+
+.books li {
+    max-width:700px;
+    padding:10px 0;
+}
+
+.books li, .books li a{
+    display:flex;
+}
+
+.books li a {
+    width:80%;
+    flex-shrink:1;
+    margin-right:10px;
+}
+
+.books li img {
+    height:100px;
+    margin:0 10px;
+}
+
+.books li:before, .actions li:before {
+    content: counter(list) '. ';
+    counter-increment: list;
+}
+
+.books li .line {
+    position:relative;
+    color:#333;
+    text-shadow:1px 1px 0 #fff,-1px 1px 0 #fff,1px -1px 0 #fff,-1px -1px 0 #fff;
+} 
+
+.books li .line div {
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    background:green;
+    z-index:-1;
+}
+
+p {
+    max-width:800px;
+    margin:15px auto;
+    text-align:justify;
+    hyphens:auto;
+    color:#333;
+}
+
+p a, .actions a{
+    text-decoration:underline;
+}
+
+.table {
+    max-width:800px;
+    margin:20px auto;
+}
+
+.table td, .table th {
+    padding:3px 5px;
+    border:1px solid #333;
+}
+
+.table th {
+    font-weight:700;
+    font-family:'Pangolin', sans-serif;
+}
+
+.pagination {
+    display:flex;
+    justify-content:center;
+    padding:10px 0;
+}
+
+.pagination li {
+    margin:0 10px;
+}
